@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NEFTÜRK TELEKOM A.Ş. - Kurumsal Telekomünikasyon Çözümleri. MVNO Hazırlık Aşamasında Faaliyet Gösteren Kurumsal Telekomünikasyon Şirketi.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="NEFTÜRK TELEKOM A.Ş.">
+<meta property="og:title" content="NEFTÜRK TELEKOM A.Ş.">
+<meta property="og:description" content="Kurumsal telekomünikasyon çözümleri. MVNO hazırlık sürecinde lider kurumsal yaklaşım.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nefturkgsm.com.tr">
+<title>NEFTÜRK TELEKOM A.Ş. | Kurumsal Telekomünikasyon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A1F44;
+  --navy-deep: #060E20;
+  --navy-mid: #0D2654;
+  --blue-primary: #1E88E5;
+  --blue-light: #42A5F5;
+  --blue-pale: #E3F2FD;
+  --red-accent: #C0392B;
+  --red-light: #E53935;
+  --grey-dark: #4A5568;
+  --grey-mid: #718096;
+  --grey-light: #EDF2F7;
+  --grey-bg: #F7F9FC;
+  --white: #FFFFFF;
+  --gold: #D4A847;
+  --transition: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--navy);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--grey-light); }
+::-webkit-scrollbar-thumb { background: var(--blue-primary); border-radius: 2px; }
+
+/* ===== COOKIE BANNER ===== */
+#cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--navy-deep);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 9999;
+  border-top: 2px solid var(--blue-primary);
+  transform: translateY(100%);
+  animation: slideUp 0.5s var(--transition) 1.5s forwards;
+}
+@keyframes slideUp { to { transform: translateY(0); } }
+#cookie-banner p { font-size: 13px; opacity: 0.85; max-width: 800px; line-height: 1.5; }
+#cookie-banner p a { color: var(--blue-light); text-decoration: underline; }
+.cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+.btn-cookie-accept {
+  background: var(--blue-primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+}
+.btn-cookie-accept:hover { background: var(--blue-light); }
+.btn-cookie-decline {
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+.btn-cookie-decline:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+/* ===== NAVIGATION ===== */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 31, 68, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(30, 136, 229, 0.2);
+  transition: all 0.3s var(--transition);
+  padding: 0 40px;
+}
+#navbar.scrolled {
+  background: rgba(6, 14, 32, 0.99);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.nav-logo-svg {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+.nav-logo-text { line-height: 1.1; }
+.nav-logo-text .brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px; color: white; letter-spacing: 0.5px; }
+.nav-logo-text .brand span { color: var(--red-light); }
+.nav-logo-text .sub { font-size: 9px; color: rgba(255,255,255,0.5); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+.nav-links { display: flex; align-items: center; gap: 8px; }
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  letter-spacing: 0.2px;
+}
+.nav-links a:hover { color: white; background: rgba(30, 136, 229, 0.15); }
+.nav-links a.active { color: var(--blue-light); }
+.nav-contact-btn {
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+  color: white !important;
+  padding: 9px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+.nav-contact-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 15px rgba(30,136,229,0.4); }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+.hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 76px; left: 0; right: 0;
+  background: var(--navy-deep);
+  z-index: 999;
+  padding: 20px;
+  border-bottom: 1px solid rgba(30,136,229,0.2);
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a { display: block; color: rgba(255,255,255,0.8); text-decoration: none; padding: 12px 16px; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* ===== PAGE SYSTEM ===== */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  background: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 76px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(30,136,229,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 80%, rgba(30,136,229,0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #060E20 0%, #0A1F44 50%, #060E20 100%);
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(30,136,229,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,136,229,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.hero-orb-1 { width: 500px; height: 500px; background: rgba(30,136,229,0.08); top: -100px; right: -50px; animation: float1 8s ease-in-out infinite; }
+.hero-orb-2 { width: 300px; height: 300px; background: rgba(192,57,43,0.06); bottom: 100px; left: -50px; animation: float2 10s ease-in-out infinite; }
+@keyframes float1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-30px, 40px) scale(1.05); } }
+@keyframes float2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(20px, -30px) scale(0.95); } }
+
+.hero-inner {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30,136,229,0.12);
+  border: 1px solid rgba(30,136,229,0.3);
+  color: var(--blue-light);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.hero-badge::before { content:''; width: 6px; height: 6px; background: var(--blue-light); border-radius: 50%; animation: blink 1.5s ease-in-out infinite; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.hero-title .accent { color: var(--blue-light); }
+.hero-title .red { color: var(--red-light); }
+.hero-subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 500px;
+  font-weight: 300;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-light) 100%);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--transition);
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 4px 20px rgba(30,136,229,0.3);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(30,136,229,0.5); }
+.btn-secondary {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-secondary:hover { border-color: rgba(255,255,255,0.5); color: white; background: rgba(255,255,255,0.05); }
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.hero-stat-num { font-family: 'DM Mono', monospace; font-size: 28px; font-weight: 500; color: white; }
+.hero-stat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+
+/* Hero Visual */
+.hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+.hero-logo-container {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-logo-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(30,136,229,0.15);
+}
+.hero-logo-ring-1 { width: 100%; height: 100%; animation: rotateSlow 30s linear infinite; }
+.hero-logo-ring-2 { width: 80%; height: 80%; border-color: rgba(30,136,229,0.1); animation: rotateSlow 20s linear infinite reverse; }
+.hero-logo-ring-3 { width: 60%; height: 60%; border-color: rgba(30,136,229,0.08); animation: rotateSlow 15s linear infinite; }
+@keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.hero-logo-ring-1::before {
+  content: '';
+  position: absolute;
+  width: 10px; height: 10px;
+  background: var(--blue-primary);
+  border-radius: 50%;
+  top: -5px; left: 50%;
+  box-shadow: 0 0 15px var(--blue-primary);
+}
+.hero-logo-ring-2::before {
+  content: '';
+  position: absolute;
+  width: 6px; height: 6px;
+  background: var(--red-light);
+  border-radius: 50%;
+  bottom: -3px; right: 30%;
+  box-shadow: 0 0 10px var(--red-light);
+}
+.hero-logo-center {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+.hero-logo-center img { width: 200px; height: auto; filter: drop-shadow(0 8px 32px rgba(30,136,229,0.3)); }
+
+/* ===== BTK WARNING ===== */
+.btk-banner {
+  background: linear-gradient(135deg, #1a0505 0%, #2d0808 100%);
+  border-top: 3px solid var(--red-light);
+  border-bottom: 3px solid var(--red-light);
+  padding: 28px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.btk-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 30px,
+    rgba(192,57,43,0.03) 30px,
+    rgba(192,57,43,0.03) 60px
+  );
+}
+.btk-inner { position: relative; max-width: 1100px; margin: 0 auto; }
+.btk-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red-light);
+  color: white;
+  padding: 4px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.btk-text {
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.6;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.2px;
+}
+.btk-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 10px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+/* ===== SECTIONS ===== */
+.section { padding: 100px 40px; }
+.section-inner { max-width: 1320px; margin: 0 auto; }
+.section-bg-grey { background: var(--grey-bg); }
+.section-bg-navy { background: var(--navy-deep); }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  margin-bottom: 16px;
+}
+.section-label::before { content: ''; width: 20px; height: 2px; background: var(--blue-primary); }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.section-title.light { color: white; }
+.section-desc {
+  font-size: 15px;
+  color: var(--grey-mid);
+  line-height: 1.8;
+  max-width: 560px;
+  font-weight: 300;
+}
+.section-desc.light { color: rgba(255,255,255,0.55); }
+
+/* ===== VISION GRID ===== */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--grey-light);
+}
+.vision-card {
+  padding: 40px 32px;
+  background: white;
+  transition: all 0.3s var(--transition);
+  border-right: 1px solid var(--grey-light);
+  border-bottom: 1px solid var(--grey-light);
+  position: relative;
+  overflow: hidden;
+}
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-primary), var(--blue-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--transition);
+}
+.vision-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(10,31,68,0.08); }
+.vision-card:hover::before { transform: scaleX(1); }
+.vision-icon {
+  width: 52px; height: 52px;
+  background: var(--blue-pale);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.vision-icon svg { width: 26px; height: 26px; color: var(--blue-primary); }
+.vision-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+.vision-card p { font-size: 13.5px; color: var(--grey-mid); line-height: 1.7; }
+.vision-card .tag {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  background: var(--blue-pale);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+/* ===== PLANNED SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+.service-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30,136,229,0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.service-card:hover { border-color: rgba(30,136,229,0.3); transform: translateY(-4px); }
+.service-card:hover::after { opacity: 1; }
+.service-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.service-card h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: white; margin-bottom: 14px; font-weight: 700; }
+.service-card p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.8; }
+.service-features { margin-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+.service-feature { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.6); }
+.service-feature::before { content: ''; width: 4px; height: 4px; background: var(--blue-light); border-radius: 50%; flex-shrink: 0; }
+.service-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.service-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+/* ===== COMPLIANCE BLOCK ===== */
+.compliance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.compliance-list { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.compliance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--grey-bg);
+  border-radius: 12px;
+  border-left: 3px solid var(--blue-primary);
+}
+.compliance-item-icon {
+  width: 40px; height: 40px;
+  background: var(--blue-pale);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.compliance-item h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.compliance-item p { font-size: 13px; color: var(--grey-mid); line-height: 1.6; }
+.compliance-visual {
+  position: relative;
+}
+.compliance-card-main {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.compliance-card-main::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(30,136,229,0.15), transparent 70%);
+}
+.compliance-badge-big {
+  font-family: 'DM Mono', monospace;
+  font-size: 60px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.compliance-card-main h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: white; margin-bottom: 12px; }
+.compliance-card-main p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+.compliance-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.compliance-tag {
+  padding: 5px 12px;
+  background: rgba(30,136,229,0.15);
+  border: 1px solid rgba(30,136,229,0.3);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--blue-light);
+  letter-spacing: 0.5px;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+.contact-info { padding-top: 20px; }
+.contact-detail { display: flex; align-items: flex-start; gap: 16px; margin-top: 32px; }
+.contact-detail-icon {
+  width: 44px; height: 44px;
+  background: var(--blue-pale);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-detail h4 { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-mid); margin-bottom: 4px; }
+.contact-detail p { font-size: 14px; color: var(--navy); font-weight: 500; }
+.contact-detail a { color: var(--blue-primary); text-decoration: none; font-weight: 500; font-size: 14px; }
+.contact-form {
+  background: white;
+  border: 1px solid var(--grey-light);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(10,31,68,0.06);
+}
+.form-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.form-subtitle { font-size: 13px; color: var(--grey-mid); margin-bottom: 32px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: var(--grey-dark); margin-bottom: 8px; text-transform: uppercase; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--grey-light);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--navy);
+  background: var(--grey-bg);
+  transition: all 0.2s;
+  outline: none;
+  resize: vertical;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue-primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(30,136,229,0.1);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-check { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+.form-check input[type="checkbox"] { margin-top: 2px; width: 16px; height: 16px; accent-color: var(--blue-primary); flex-shrink: 0; }
+.form-check label { font-size: 12px; color: var(--grey-mid); line-height: 1.5; }
+.form-check label a { color: var(--blue-primary); }
+.form-success { display: none; text-align: center; padding: 40px 20px; }
+.form-success-icon { font-size: 48px; margin-bottom: 16px; }
+.form-success h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); margin-bottom: 8px; }
+.form-success p { font-size: 14px; color: var(--grey-mid); }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--navy-deep);
+  color: white;
+  padding: 80px 40px 0;
+  border-top: 1px solid rgba(30,136,229,0.15);
+}
+.footer-inner { max-width: 1320px; margin: 0 auto; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.footer-brand p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 20px; max-width: 280px; }
+.footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.footer-col a { display: block; font-size: 13.5px; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 10px; cursor: pointer; transition: color 0.2s; }
+.footer-col a:hover { color: var(--blue-light); }
+.footer-bottom {
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
+.footer-bottom-links { display: flex; gap: 24px; }
+.footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: none; cursor: pointer; }
+.footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+.footer-btk-notice {
+  background: rgba(192,57,43,0.08);
+  border: 1px solid rgba(192,57,43,0.2);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+}
+.footer-btk-notice p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.footer-btk-notice strong { color: rgba(255,255,255,0.65); }
+
+/* ===== ABOUT PAGE ===== */
+.about-hero {
+  background: var(--navy-deep);
+  padding: 160px 40px 100px;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(30,136,229,0.1), transparent);
+}
+.page-hero-inner { max-width: 1320px; margin: 0 auto; position: relative; }
+.page-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30,136,229,0.15);
+  border: 1px solid rgba(30,136,229,0.3);
+  color: var(--blue-light);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.page-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.page-hero-sub { font-size: 16px; color: rgba(255,255,255,0.55); max-width: 600px; line-height: 1.8; font-weight: 300; }
+
+.about-content { padding: 100px 40px; }
+.about-inner { max-width: 1320px; margin: 0 auto; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.about-text h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--navy); margin-bottom: 20px; font-weight: 700; }
+.about-text p { font-size: 14.5px; color: var(--grey-mid); line-height: 1.9; margin-bottom: 20px; }
+.about-values { margin-top: 60px; }
+.about-values h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--navy); margin-bottom: 32px; }
+.value-item { display: flex; gap: 20px; margin-bottom: 28px; align-items: flex-start; }
+.value-num { font-family: 'DM Mono', monospace; font-size: 32px; font-weight: 500; color: var(--blue-pale); line-height: 1; flex-shrink: 0; min-width: 50px; }
+.value-item h4 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.value-item p { font-size: 13.5px; color: var(--grey-mid); line-height: 1.7; }
+.about-sidebar { position: sticky; top: 100px; }
+.about-card {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+.about-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 16px; }
+.about-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.about-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.about-info-item { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 16px; }
+.about-info-item .label { font-size: 10px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.about-info-item .value { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; }
+
+/* ===== LEGAL PAGES ===== */
+.legal-page { padding: 160px 40px 100px; }
+.legal-inner { max-width: 900px; margin: 0 auto; }
+.legal-inner h1 { font-family: 'Playfair Display', serif; font-size: 40px; color: var(--navy); margin-bottom: 8px; font-weight: 900; }
+.legal-date { font-size: 12px; color: var(--grey-mid); margin-bottom: 48px; font-family: 'DM Mono', monospace; }
+.legal-section { margin-bottom: 40px; }
+.legal-section h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); margin-bottom: 16px; font-weight: 700; padding-bottom: 12px; border-bottom: 1px solid var(--grey-light); }
+.legal-section h3 { font-size: 16px; color: var(--navy); margin-bottom: 10px; font-weight: 600; margin-top: 20px; }
+.legal-section p { font-size: 14px; color: var(--grey-dark); line-height: 1.9; margin-bottom: 16px; }
+.legal-section ul { padding-left: 20px; }
+.legal-section ul li { font-size: 14px; color: var(--grey-dark); line-height: 1.8; margin-bottom: 8px; }
+.legal-highlight {
+  background: var(--blue-pale);
+  border-left: 4px solid var(--blue-primary);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.legal-highlight p { font-size: 14px; color: var(--navy); font-weight: 500; margin-bottom: 0; }
+.legal-warning {
+  background: #fff5f5;
+  border-left: 4px solid var(--red-light);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.legal-warning p { font-size: 14px; color: #c53030; margin-bottom: 0; font-weight: 500; }
+
+/* ===== FAQ PAGE ===== */
+.faq-page { padding: 160px 40px 100px; }
+.faq-inner { max-width: 860px; margin: 0 auto; }
+.faq-item { border: 1px solid var(--grey-light); border-radius: 14px; margin-bottom: 12px; overflow: hidden; transition: all 0.2s; }
+.faq-item.open { border-color: var(--blue-primary); box-shadow: 0 4px 20px rgba(30,136,229,0.1); }
+.faq-question { padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 16px; }
+.faq-question h3 { font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+.faq-toggle { width: 28px; height: 28px; background: var(--grey-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s; }
+.faq-item.open .faq-toggle { background: var(--blue-primary); transform: rotate(45deg); }
+.faq-toggle svg { width: 14px; height: 14px; color: var(--grey-dark); }
+.faq-item.open .faq-toggle svg { color: white; }
+.faq-answer { display: none; padding: 0 24px 22px; }
+.faq-item.open .faq-answer { display: block; }
+.faq-answer p { font-size: 14px; color: var(--grey-dark); line-height: 1.8; }
+
+/* ===== BTK UYUM PAGE ===== */
+.btk-page { padding: 160px 40px 100px; }
+.btk-inner { max-width: 1100px; margin: 0 auto; }
+.btk-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.btk-card {
+  padding: 32px;
+  border: 1px solid var(--grey-light);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+.btk-card:hover { border-color: var(--blue-primary); box-shadow: 0 8px 32px rgba(30,136,229,0.1); transform: translateY(-2px); }
+.btk-card-icon { width: 48px; height: 48px; background: var(--blue-pale); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.btk-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+.btk-card p { font-size: 13px; color: var(--grey-mid); line-height: 1.7; }
+.btk-main-notice {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 48px;
+  margin-top: 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.btk-main-notice::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red-light), #ff6b6b, var(--red-light));
+}
+.btk-main-notice h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: white; margin-bottom: 20px; }
+.btk-main-notice p { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.8; max-width: 800px; margin: 0 auto; }
+.btk-main-notice .notice-text { font-size: 18px; font-weight: 600; color: white; background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.3); border-radius: 10px; padding: 20px; margin: 20px auto; max-width: 900px; }
+
+/* ===== ADMIN PANEL (HIDDEN) ===== */
+#admin-panel {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 10000;
+  overflow-y: auto;
+}
+.admin-inner {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #1a1a2e;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(30,136,229,0.2);
+}
+.admin-header {
+  background: #0f0f1e;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(30,136,229,0.15);
+}
+.admin-header h2 { font-family: 'DM Mono', monospace; font-size: 16px; color: white; }
+.admin-close { background: rgba(255,255,255,0.1); border: none; color: white; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.admin-body { padding: 32px; display: grid; grid-template-columns: 200px 1fr; gap: 32px; }
+.admin-nav { display: flex; flex-direction: column; gap: 4px; }
+.admin-nav-item { padding: 10px 14px; border-radius: 8px; cursor: pointer; color: rgba(255,255,255,0.5); font-size: 13px; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+.admin-nav-item:hover { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.8); }
+.admin-nav-item.active { background: rgba(30,136,229,0.15); color: var(--blue-light); }
+.admin-content-area { background: rgba(0,0,0,0.2); border-radius: 12px; padding: 24px; min-height: 400px; }
+.admin-section { display: none; }
+.admin-section.active { display: block; }
+.admin-section h3 { font-size: 18px; color: white; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+.admin-field { margin-bottom: 16px; }
+.admin-field label { display: block; font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.admin-field input, .admin-field textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; color: white; font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; }
+.admin-field input:focus, .admin-field textarea:focus { border-color: rgba(30,136,229,0.5); }
+.admin-save { background: var(--blue-primary); color: white; border: none; padding: 10px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; font-family: 'DM Sans', sans-serif; }
+.admin-feature-disabled {
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: rgba(255,255,255,0.25);
+  font-size: 13px;
+}
+.admin-status-badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.badge-disabled { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.3); }
+.badge-enabled { background: rgba(30,196,100,0.15); color: #48bb78; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .vision-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
+  .compliance-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .btk-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .section { padding: 70px 24px; }
+  #hero, .about-hero, .legal-page, .faq-page, .btk-page { padding-left: 24px; padding-right: 24px; }
+  .vision-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .contact-form { padding: 28px; }
+  .btk-cards { grid-template-columns: 1fr; }
+  .about-info-grid { grid-template-columns: 1fr; }
+  .hero-inner { padding: 40px 24px; }
+  .btk-banner { padding: 20px 24px; }
+  #navbar { padding: 0 20px; }
+  footer { padding: 60px 24px 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s var(--transition), transform 0.7s var(--transition); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up-delay-1 { transition-delay: 0.1s; }
+.fade-up-delay-2 { transition-delay: 0.2s; }
+.fade-up-delay-3 { transition-delay: 0.3s; }
+.fade-up-delay-4 { transition-delay: 0.4s; }
+
+/* Timeline for about */
+.timeline { margin-top: 40px; }
+.timeline-item { display: flex; gap: 24px; margin-bottom: 32px; position: relative; }
+.timeline-item::after { content:''; position: absolute; left: 19px; top: 40px; bottom: -24px; width: 1px; background: var(--grey-light); }
+.timeline-item:last-child::after { display: none; }
+.timeline-dot { width: 40px; height: 40px; background: var(--blue-pale); border: 2px solid var(--blue-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--blue-primary); }
+.timeline-content h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.timeline-content p { font-size: 13px; color: var(--grey-mid); line-height: 1.6; }
+.timeline-year { font-size: 11px; color: var(--blue-primary); font-family: 'DM Mono', monospace; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div id="cookie-banner">
+  <p>Bu web sitesi, kullanıcı deneyimini iyileştirmek için çerezler kullanmaktadır. <a onclick="navigate('cookies')">Çerez Politikamız</a> hakkında daha fazla bilgi edinin. KVKK kapsamındaki haklarınız için <a onclick="navigate('kvkk')">Gizlilik Politikamızı</a> inceleyebilirsiniz.</p>
+  <div class="cookie-btns">
+    <button class="btn-cookie-decline" onclick="closeCookie()">Reddet</button>
+    <button class="btn-cookie-accept" onclick="closeCookie()">Kabul Et</button>
+  </div>
+</div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="navigate('home')" style="cursor:pointer;">
+      <!-- SVG Logo (Neftürk Orbit Style) -->
+      <svg class="nav-logo-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <ellipse cx="26" cy="26" rx="23" ry="10" stroke="#1E88E5" stroke-width="1.5" fill="none" transform="rotate(-20,26,26)"/>
+        <!-- Globe -->
+        <circle cx="26" cy="26" r="12" fill="url(#g1)" opacity="0.85"/>
+        <path d="M14 26 Q20 20 26 26 Q32 32 38 26" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+        <path d="M19 18 Q22 26 19 34" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none"/>
+        <path d="M33 18 Q30 26 33 34" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none"/>
+        <!-- Center dot -->
+        <circle cx="14" cy="26" r="3" fill="#1E3A8A"/>
+        <!-- Arrow sweep -->
+        <path d="M35 16 Q44 10 48 22" stroke="#1E88E5" stroke-width="2" fill="none" stroke-linecap="round" marker-end="url(#arr)"/>
+        <defs>
+          <linearGradient id="g1" x1="14" y1="14" x2="38" y2="38">
+            <stop offset="0%" stop-color="#90CAF9"/>
+            <stop offset="100%" stop-color="#1565C0"/>
+          </linearGradient>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#1E88E5"/>
+          </marker>
+        </defs>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="brand" style="color:var(--red-light);">NEFTÜRK</div>
+        <div class="sub">Telekom A.Ş.</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a onclick="navigate('home')">Ana Sayfa</a>
+      <a onclick="navigate('about')">Hakkımızda</a>
+      <a onclick="navigate('btk')">BTK Uyum</a>
+      <a onclick="navigate('kvkk')">KVKK</a>
+      <a onclick="navigate('faq')">SSS</a>
+      <a onclick="navigate('contact')" class="nav-contact-btn">İletişim</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="navigate('home');toggleMenu()">Ana Sayfa</a>
+  <a onclick="navigate('about');toggleMenu()">Hakkımızda</a>
+  <a onclick="navigate('btk');toggleMenu()">BTK Uyum</a>
+  <a onclick="navigate('kvkk');toggleMenu()">KVKK</a>
+  <a onclick="navigate('cookies');toggleMenu()">Çerez Politikası</a>
+  <a onclick="navigate('faq');toggleMenu()">SSS</a>
+  <a onclick="navigate('contact');toggleMenu()">İletişim</a>
+</div>
+
+<!-- ===================================================== -->
+<!-- HOME PAGE -->
+<!-- ===================================================== -->
+<div class="page active" id="page-home">
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge fade-up visible">MVNO Hazırlık Sürecinde</div>
+        <h1 class="hero-title fade-up visible fade-up-delay-1">
+          Türkiye'nin<br>
+          <span class="accent">Kurumsal</span><br>
+          Telekomünikasyon<br>
+          <span class="red">Vizyonu</span>
+        </h1>
+        <p class="hero-subtitle fade-up visible fade-up-delay-2">
+          NEFTÜRK TELEKOM A.Ş., sanal mobil şebeke (MVNO) lisans sürecinde faaliyet gösteren kurumsal bir telekomünikasyon şirketidir. Şu an aktif elektronik haberleşme hizmeti sunulmamaktadır.
+        </p>
+        <div class="hero-actions fade-up visible fade-up-delay-3">
+          <button class="btn-primary" onclick="navigate('about')">Şirketi Tanıyın</button>
+          <button class="btn-secondary" onclick="navigate('btk')">Uyum Bilgisi</button>
+        </div>
+        <div class="hero-stats fade-up visible fade-up-delay-4">
+          <div>
+            <div class="hero-stat-num">2019</div>
+            <div class="hero-stat-label">Kuruluş Yılı</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">4+</div>
+            <div class="hero-stat-label">Planlanan Hizmet Alanı</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">BTK</div>
+            <div class="hero-stat-label">Uyum Sürecinde</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-container">
+          <div class="hero-logo-ring hero-logo-ring-1"></div>
+          <div class="hero-logo-ring hero-logo-ring-2"></div>
+          <div class="hero-logo-ring hero-logo-ring-3"></div>
+          <div class="hero-logo-center">
+            <!-- Embedded SVG Logo (replaces img) -->
+            <svg width="200" height="120" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow globe back -->
+              <ellipse cx="100" cy="100" rx="75" ry="75" fill="url(#heroG1)" opacity="0.15"/>
+              <!-- Main globe -->
+              <circle cx="120" cy="90" r="60" fill="url(#heroG2)"/>
+              <!-- Globe lines -->
+              <ellipse cx="120" cy="90" rx="60" ry="22" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+              <ellipse cx="120" cy="90" rx="60" ry="38" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+              <line x1="120" y1="30" x2="120" y2="150" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <line x1="60" y1="90" x2="180" y2="90" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Orbit ring -->
+              <ellipse cx="130" cy="95" rx="100" ry="30" stroke="#1E88E5" stroke-width="3" fill="none" transform="rotate(-15, 130, 95)"/>
+              <!-- Center dot -->
+              <circle cx="47" cy="80" r="8" fill="#1E3A8A"/>
+              <!-- Arrow -->
+              <path d="M200 40 Q240 20 260 60" stroke="#1E88E5" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <polygon points="258,50 270,65 255,68" fill="#1E88E5"/>
+              <!-- Text NEFTÜRK -->
+              <text x="160" y="88" font-family="Georgia, serif" font-size="28" font-weight="900" fill="#E53935" letter-spacing="1">NEFTÜRK</text>
+              <text x="168" y="108" font-family="Arial, sans-serif" font-size="13" fill="#9E9E9E" letter-spacing="3">TELEKOM A.Ş.</text>
+              <defs>
+                <radialGradient id="heroG1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#90CAF9"/>
+                  <stop offset="100%" stop-color="transparent"/>
+                </radialGradient>
+                <radialGradient id="heroG2" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#90CAF9"/>
+                  <stop offset="50%" stop-color="#42A5F5"/>
+                  <stop offset="100%" stop-color="#1565C0"/>
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BTK WARNING BANNER -->
+  <div class="btk-banner">
+    <div class="btk-inner">
+      <div class="btk-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Zorunlu Bilgilendirme — BTK
+      </div>
+      <div class="btk-text">
+        Şirketimizce Sanal Mobil Şebeke Hizmeti kapsamında herhangi bir elektronik haberleşme hizmeti sunulmamaktadır.
+      </div>
+      <div class="btk-sub">Bilgi Teknolojileri ve İletişim Kurumu (BTK) mevzuatı gereğince zorunlu kamuoyu bildirimi · NEFTÜRK TELEKOM A.Ş. · nefturkgsm.com.tr</div>
+    </div>
+  </div>
+
+  <!-- VISION SECTION -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="fade-up">
+        <div class="section-label">Kurumsal Vizyon</div>
+        <h2 class="section-title">Telekomünikasyonda<br>Yeni Bir Kurumsal Yaklaşım</h2>
+        <p class="section-desc">NEFTÜRK TELEKOM, MVNO lisans süreci kapsamında planlanan hizmet yönetim modeliyle kurumsal telekomünikasyon çözümleri alanında köklü bir değişim hedeflemektedir.</p>
+      </div>
+      <div class="vision-grid">
+        <div class="vision-card fade-up">
+          <div class="vision-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Hizmet Yönetim Modeli</h3>
+          <p>MVNO mimarisi üzerine inşa edilen kurumsal hizmet yönetim modeli ile müşteri deneyimini merkeze alan bir yapı planlanmaktadır.</p>
+          <span class="tag">Planlanan</span>
+        </div>
+        <div class="vision-card fade-up fade-up-delay-1">
+          <div class="vision-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>BTK Uyumlu Yapı</h3>
+          <p>Tüm operasyonel süreçler Bilgi Teknolojileri ve İletişim Kurumu mevzuatıyla tam uyumlu olarak tasarlanmaktadır.</p>
+          <span class="tag">Aktif Süreç</span>
+        </div>
+        <div class="vision-card fade-up fade-up-delay-2">
+          <div class="vision-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <h3>Kurumsal Bağlantı</h3>
+          <p>Kurumsal müşterilere yönelik planlanan bağlantı çözümleri ile işletmelerin iletişim altyapısına değer katmak hedeflenmektedir.</p>
+          <span class="tag">Planlanan</span>
+        </div>
+        <div class="vision-card fade-up">
+          <div class="vision-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <h3>IoT / M2M Çözümleri</h3>
+          <p>Nesnelerin İnterneti ve makine-makine iletişimi alanlarında kurumsal ölçekte hizmet sunumu planlanmaktadır.</p>
+          <span class="tag">Planlanan</span>
+        </div>
+        <div class="vision-card fade-up fade-up-delay-1">
+          <div class="vision-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Müşteri Deneyim Teknolojileri</h3>
+          <p>Dijital self-servis, yapay zeka destekli müşteri hizmetleri ve kişiselleştirilmiş deneyim yönetimi planlanmaktadır.</p>
+          <span class="tag">Planlanan</span>
+        </div>
+        <div class="vision-card fade-up fade-up-delay-2">
+          <div class="vision-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Şeffaf Kurumsal Yönetim</h3>
+          <p>KVKK, GDPR ve BTK mevzuatına tam uyumlu, şeffaf ve denetlenebilir kurumsal yönetim anlayışıyla faaliyet gösterilmektedir.</p>
+          <span class="tag">Aktif</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANNED SERVICES -->
+  <section class="section section-bg-navy">
+    <div class="section-inner">
+      <div class="fade-up">
+        <div class="section-label" style="color:var(--blue-light)">Planlanan Hizmet Alanları</div>
+        <h2 class="section-title light">Lisans Sonrası<br>Aktif Edilecek Çözümler</h2>
+        <p class="section-desc light">Aşağıdaki hizmet alanları yalnızca planlama aşamasındadır. BTK lisans süreci tamamlandıktan sonra hayata geçirilecektir. Şu anda herhangi bir elektronik haberleşme hizmeti sunulmamaktadır.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-num">01 / MOBİL İLETİŞİM</div>
+          <h3>Mobil Haberleşme Hizmetleri</h3>
+          <p>MVNO lisansı kapsamında planlanmış kurumsal mobil haberleşme çözümleri. Lisans sonrasında aktif edilecektir.</p>
+          <div class="service-features">
+            <div class="service-feature">Kurumsal mobil hat yönetimi</div>
+            <div class="service-feature">Toplu kurumsal paket yönetimi</div>
+            <div class="service-feature">Dijital self-servis portal</div>
+          </div>
+          <div class="service-status">Lisans Bekleniyor</div>
+        </div>
+        <div class="service-card fade-up fade-up-delay-1">
+          <div class="service-num">02 / KURUMSAL BAĞLANTı</div>
+          <h3>Kurumsal Bağlantı Çözümleri</h3>
+          <p>İşletmelere özel tasarlanmış planlanan kurumsal bağlantı ve veri yönetimi hizmetleri.</p>
+          <div class="service-features">
+            <div class="service-feature">Kurumsal veri yönetimi</div>
+            <div class="service-feature">Güvenli kurumsal ağ yapısı</div>
+            <div class="service-feature">Merkezi kontrol paneli</div>
+          </div>
+          <div class="service-status">Planlama Aşamasında</div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-num">03 / IoT / M2M</div>
+          <h3>Nesnelerin İnterneti Çözümleri</h3>
+          <p>Endüstriyel IoT ve M2M iletişim altyapısı için planlanmış kurumsal bağlantı çözümleri.</p>
+          <div class="service-features">
+            <div class="service-feature">Endüstriyel IoT bağlantısı</div>
+            <div class="service-feature">M2M iletişim yönetimi</div>
+            <div class="service-feature">Uzaktan cihaz yönetimi</div>
+          </div>
+          <div class="service-status">Planlama Aşamasında</div>
+        </div>
+        <div class="service-card fade-up fade-up-delay-1">
+          <div class="service-num">04 / DENEYİM TEKNOLOJİLERİ</div>
+          <h3>Müşteri Deneyim Teknolojileri</h3>
+          <p>Yapay zeka destekli müşteri deneyim yönetimi ve dijital self-servis platformu planlanmaktadır.</p>
+          <div class="service-features">
+            <div class="service-feature">AI destekli müşteri hizmetleri</div>
+            <div class="service-feature">Kişiselleştirilmiş hizmet deneyimi</div>
+            <div class="service-feature">Dijital onboarding süreci</div>
+          </div>
+          <div class="service-status">Geliştirme Aşamasında</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE BLOCK -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="compliance-grid">
+        <div class="fade-up">
+          <div class="section-label">Yasal Uyum</div>
+          <h2 class="section-title">Şeffaf ve Denetlenebilir Kurumsal Yapı</h2>
+          <p class="section-desc">NEFTÜRK TELEKOM A.Ş., tüm yasal gerekliliklere eksiksiz uymayı kurumsal değer olarak benimsemektedir.</p>
+          <div class="compliance-list">
+            <div class="compliance-item">
+              <div class="compliance-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4>BTK Mevzuat Uyumu</h4>
+                <p>Bilgi Teknolojileri ve İletişim Kurumu düzenlemeleri çerçevesinde tam uyumlu faaliyet.</p>
+              </div>
+            </div>
+            <div class="compliance-item">
+              <div class="compliance-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <div>
+                <h4>KVKK / GDPR Uyumu</h4>
+                <p>Kişisel verilerin korunması mevzuatına tam uyumlu veri yönetimi politikaları.</p>
+              </div>
+            </div>
+            <div class="compliance-item">
+              <div class="compliance-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h4>Zorunlu Kamuoyu Bildirimi</h4>
+                <p>BTK mevzuatı uyarınca aktif elektronik haberleşme hizmeti sunulmadığı kamuoyuna duyurulmaktadır.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="compliance-visual fade-up fade-up-delay-2">
+          <div class="compliance-card-main">
+            <div class="compliance-badge-big">BTK</div>
+            <h3>Uyum Taahhüdü</h3>
+            <p>NEFTÜRK TELEKOM A.Ş., Sanal Mobil Şebeke Operatörü (MVNO) lisans başvuru ve hazırlık sürecinde bulunmakta olup bu süreçte herhangi bir elektronik haberleşme hizmeti sunmamaktadır.</p>
+            <div class="compliance-tags">
+              <span class="compliance-tag">MVNO Hazırlık</span>
+              <span class="compliance-tag">BTK Uyumlu</span>
+              <span class="compliance-tag">KVKK</span>
+              <span class="compliance-tag">GDPR</span>
+              <span class="compliance-tag">Kurumsal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================================================== -->
+<!-- ABOUT PAGE -->
+<!-- ===================================================== -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Hakkımızda</div>
+      <h1 class="page-hero-title">NEFTÜRK TELEKOM A.Ş.<br>Kurumsal Kimlik</h1>
+      <p class="page-hero-sub">Türkiye'nin kurumsal telekomünikasyon ekosistemi için değer yaratan, MVNO lisans sürecinde faaliyet gösteren şeffaf bir kurumsal yapı.</p>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="about-inner">
+      <div class="about-grid">
+        <div>
+          <div class="about-text">
+            <h2>Kurumsal Telekomünikasyonda Yeni Bir Sayfa</h2>
+            <p>NEFTÜRK TELEKOM A.Ş., kurumsal telekomünikasyon hizmetleri alanında faaliyet göstermek üzere kurulmuş, Türkiye Cumhuriyeti kanunları çerçevesinde tescil edilmiş bir anonim şirkettir.</p>
+            <p>Şirketimiz, Bilgi Teknolojileri ve İletişim Kurumu (BTK) nezdinde Sanal Mobil Şebeke Operatörü (MVNO) lisans başvuru ve hazırlık sürecinde bulunmaktadır. Bu süreçte herhangi bir elektronik haberleşme hizmeti sunulmamaktadır.</p>
+            <p>Kurumsal yönetim anlayışımız, şeffaflık, yasal uyum ve müşteri odaklılık ilkeleri üzerine inşa edilmiştir. Lisans sonrası döneme yönelik tüm teknik, operasyonel ve ticari altyapı hazırlıkları titizlikle yürütülmektedir.</p>
+          </div>
+          <div class="about-values">
+            <h3>Kurumsal Değerlerimiz</h3>
+            <div class="value-item">
+              <div class="value-num">01</div>
+              <div>
+                <h4>Şeffaflık</h4>
+                <p>Tüm operasyonel ve finansal süreçlerde tam şeffaflık ilkesiyle hareket etmek temel kurumsal değerimizdir.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-num">02</div>
+              <div>
+                <h4>Yasal Uyum</h4>
+                <p>BTK, KVKK ve ilgili tüm mevzuata eksiksiz uyum, faaliyetlerimizin olmazsa olmaz koşuludur.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-num">03</div>
+              <div>
+                <h4>Kurumsal Sorumluluk</h4>
+                <p>Paydaşlarımıza, çalışanlarımıza ve topluma karşı kurumsal sorumluluk bilinciyle hareket etmekteyiz.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-num">04</div>
+              <div>
+                <h4>İnovasyon</h4>
+                <p>Telekomünikasyon sektöründe yenilikçi hizmet modelleri geliştirerek sektöre değer katmayı hedefliyoruz.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline" style="margin-top:60px;">
+            <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin-bottom:32px;">Kurumsal Yol Haritası</h3>
+            <div class="timeline-item">
+              <div class="timeline-dot">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-year">2019</div>
+                <h4>Şirket Kuruluşu</h4>
+                <p>NEFTÜRK TELEKOM A.Ş. Türkiye Cumhuriyeti kanunları çerçevesinde anonim şirket olarak kuruldu.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">→</div>
+              <div class="timeline-content">
+                <div class="timeline-year">2019–2025</div>
+                <h4>BTK Lisans Hazırlık Süreci</h4>
+                <p>Sanal Mobil Şebeke Operatörü (MVNO) lisans başvurusu ve teknik altyapı hazırlıkları devam etmektedir.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">○</div>
+              <div class="timeline-content">
+                <div class="timeline-year">Planlanan</div>
+                <h4>Lisans Sonrası Operasyonel Başlangıç</h4>
+                <p>BTK lisansının alınmasının ardından planlanan kurumsal telekomünikasyon hizmetleri aktif hale getirilecektir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-sidebar">
+          <div class="about-card">
+            <h3>Şirket Bilgileri</h3>
+            <p style="margin-bottom:20px;">NEFTÜRK TELEKOM A.Ş. resmi şirket bilgileri.</p>
+            <div class="about-info-grid">
+              <div class="about-info-item">
+                <div class="label">Şirket Unvanı</div>
+                <div class="value">NEFTÜRK TELEKOM A.Ş.</div>
+              </div>
+              <div class="about-info-item">
+                <div class="label">Kuruluş Yılı</div>
+                <div class="value">2019</div>
+              </div>
+              <div class="about-info-item">
+                <div class="label">Statü</div>
+                <div class="value">Anonim Şirket</div>
+              </div>
+              <div class="about-info-item">
+                <div class="label">Sektör</div>
+                <div class="value">Telekomünikasyon</div>
+              </div>
+              <div class="about-info-item">
+                <div class="label">Model</div>
+                <div class="value">MVNO Hazırlık</div>
+              </div>
+              <div class="about-info-item">
+                <div class="label">Uyum</div>
+                <div class="value">BTK Sürecinde</div>
+              </div>
+            </div>
+            <div style="margin-top:16px;padding:14px;background:rgba(255,255,255,0.05);border-radius:10px;">
+              <div class="label" style="font-size:10px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Adres</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">Rüzgarlıbahçe Mah. Kavak Sok. No:12/2<br>İmpa İş Merkezi, Beykoz / İSTANBUL</div>
+            </div>
+            <div style="margin-top:10px;padding:14px;background:rgba(255,255,255,0.05);border-radius:10px;">
+              <div class="label" style="font-size:10px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">E-posta</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.7);">info@nefturktelekom.com</div>
+            </div>
+          </div>
+          <div class="about-card" style="background:var(--grey-bg);border:1px solid var(--grey-light);">
+            <h3 style="color:var(--navy);">Önemli Bilgilendirme</h3>
+            <p style="color:var(--grey-dark);">NEFTÜRK TELEKOM A.Ş., herhangi bir şebeke sahibi, altyapı sağlayıcısı veya aktif mobil operatör değildir. Şirketimiz MVNO lisans hazırlık sürecinde olup aktif elektronik haberleşme hizmeti sunmamaktadır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- BTK UYUM PAGE -->
+<!-- ===================================================== -->
+<div class="page" id="page-btk">
+  <div class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Kurumsal Uyum</div>
+      <h1 class="page-hero-title">BTK Uyum<br>Bilgilendirmesi</h1>
+      <p class="page-hero-sub">Bilgi Teknolojileri ve İletişim Kurumu mevzuatı çerçevesinde şirketimizin uyum durumu ve yasal bildirimleri.</p>
+    </div>
+  </div>
+  <div class="btk-page">
+    <div class="btk-inner">
+      <div class="btk-main-notice">
+        <h2>Zorunlu Kamuoyu Bildirimi</h2>
+        <div class="notice-text">
+          Şirketimizce Sanal Mobil Şebeke Hizmeti kapsamında herhangi bir elektronik haberleşme hizmeti sunulmamaktadır.
+        </div>
+        <p>Bu bildirim, Bilgi Teknolojileri ve İletişim Kurumu (BTK) mevzuatı gereğince kamuoyuyla zorunlu olarak paylaşılmaktadır. NEFTÜRK TELEKOM A.Ş., MVNO lisans başvuru ve hazırlık sürecinde bulunmakta olup bu süreçte herhangi bir telekomünikasyon hizmeti sunmamaktadır.</p>
+      </div>
+      <div class="btk-cards" style="margin-top:48px;">
+        <div class="btk-card">
+          <div class="btk-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Mevzuat Uyumu</h3>
+          <p>6502 sayılı Elektronik Haberleşme Kanunu ve BTK ikincil mevzuatına tam uyum sağlanmaktadır. Tüm kurumsal süreçler ilgili mevzuat çerçevesinde yürütülmektedir.</p>
+        </div>
+        <div class="btk-card">
+          <div class="btk-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Lisans Durumu</h3>
+          <p>Sanal Mobil Şebeke Operatörü (MVNO) lisans süreci BTK nezdinde yürütülmektedir. Lisans alınmadan herhangi bir elektronik haberleşme hizmeti sunulmayacaktır.</p>
+        </div>
+        <div class="btk-card">
+          <div class="btk-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <h3>Şeffaf Beyan</h3>
+          <p>Şirketimiz herhangi bir şebeke altyapı sahibi veya mobil operatör olmadığını ve aktif elektronik haberleşme hizmeti sunmadığını kamuoyuna şeffaf biçimde beyan etmektedir.</p>
+        </div>
+        <div class="btk-card">
+          <div class="btk-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>BTK İletişim</h3>
+          <p>Bilgi Teknolojileri ve İletişim Kurumu'nun resmi iletişim kanalları aracılığıyla her türlü denetim ve bilgi talebine açık durumdayız.</p>
+        </div>
+        <div class="btk-card">
+          <div class="btk-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h3>Veri Güvenliği</h3>
+          <p>KVKK kapsamında kişisel veri işleme faaliyetleri sınırlı tutulmakta, yalnızca zorunlu iletişim bilgileri yasal mevzuat dahilinde işlenmektedir.</p>
+        </div>
+        <div class="btk-card">
+          <div class="btk-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Uyum Raporlaması</h3>
+          <p>Yasal gereklilikler kapsamında tüm uyum süreçleri kayıt altına alınmakta ve ilgili düzenleyici kurumlarla paylaşılmaktadır.</p>
+        </div>
+      </div>
+
+      <div class="legal-section" style="margin-top:60px;">
+        <h2>MVNO Hakkında Bilgilendirme</h2>
+        <p>Sanal Mobil Şebeke Operatörü (MVNO — Mobile Virtual Network Operator), kendi radyo şebeke altyapısına sahip olmaksızın, yerleşik mobil operatörlerin altyapısını kullanarak mobil haberleşme hizmetleri sunan işletmecileri tanımlamaktadır.</p>
+        <p>NEFTÜRK TELEKOM A.Ş., MVNO modeli kapsamında faaliyet göstermek üzere lisans başvuru sürecinde olup henüz herhangi bir elektronik haberleşme hizmeti sunmamaktadır. Şirketimiz, ne bir şebeke altyapı sahibi ne de aktif bir mobil operatördür.</p>
+        <div class="legal-warning">
+          <p>⚠️ NEFTÜRK TELEKOM A.Ş. şu anda herhangi bir SIM kart, eSIM, mobil hat veya veri hizmeti sunmamaktadır. Bu yönde yapılan her türlü ticari teklif şirketimizle ilişkili değildir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- KVKK PAGE -->
+<!-- ===================================================== -->
+<div class="page" id="page-kvkk">
+  <div class="legal-page">
+    <div class="legal-inner">
+      <h1>Gizlilik Politikası</h1>
+      <p class="legal-date">KVKK Aydınlatma Metni | Son Güncelleme: Ocak 2025 | Versiyon: 1.0</p>
+      <div class="legal-highlight">
+        <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında NEFTÜRK TELEKOM A.Ş. tarafından hazırlanmış aydınlatma metnidir. Şirketimiz, herhangi bir elektronik haberleşme hizmeti sunmamakta olup veri işleme faaliyetleri son derece sınırlıdır.</p>
+      </div>
+      <div class="legal-section">
+        <h2>1. Veri Sorumlusu</h2>
+        <p><strong>Unvan:</strong> NEFTÜRK TELEKOM A.Ş.</p>
+        <p><strong>Adres:</strong> Rüzgarlıbahçe Mah. Kavak Sok. No:12/2 İmpa İş Merkezi, Beykoz / İSTANBUL</p>
+        <p><strong>E-posta:</strong> info@nefturktelekom.com</p>
+        <p><strong>Web Sitesi:</strong> nefturkgsm.com.tr</p>
+        <p>NEFTÜRK TELEKOM A.Ş., 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla hareket etmektedir.</p>
+      </div>
+      <div class="legal-section">
+        <h2>2. İşlenen Kişisel Veriler</h2>
+        <p>Şirketimiz web sitesi üzerinden yalnızca aşağıdaki kişisel verileri işlemektedir:</p>
+        <ul>
+          <li><strong>İletişim Formu Verileri:</strong> Ad, soyad, e-posta adresi ve mesaj içeriği</li>
+          <li><strong>Teknik Veriler:</strong> IP adresi, tarayıcı türü, işletim sistemi (çerez politikası kapsamında)</li>
+          <li><strong>Analitik Veriler:</strong> Anonim sayfa görüntüleme ve trafik verileri</li>
+        </ul>
+        <p>Şirketimiz, henüz aktif bir elektronik haberleşme hizmeti sunmadığından telefon numarası, abonelik bilgisi veya ödeme bilgisi gibi telekomünikasyon hizmetlerine özgü veriler işlenmemektedir.</p>
+      </div>
+      <div class="legal-section">
+        <h2>3. İşleme Amaçları ve Hukuki Dayanaklar</h2>
+        <h3>3.1 İletişim Talepleri</h3>
+        <p>İletişim formu aracılığıyla iletilen kişisel veriler; gelen taleplerin yanıtlanması amacıyla, KVKK m. 5/2(f) kapsamında meşru menfaat hukuki dayanağıyla işlenmektedir.</p>
+        <h3>3.2 Web Sitesi Teknik İşletimi</h3>
+        <p>Web sitesinin güvenli ve etkin biçimde işletilmesi amacıyla teknik veriler zorunlu çerezler aracılığıyla işlenmektedir.</p>
+      </div>
+      <div class="legal-section">
+        <h2>4. Veri Saklama Süreleri</h2>
+        <ul>
+          <li>İletişim formu verileri: Talebin yanıtlanmasından itibaren 2 yıl</li>
+          <li>Teknik log kayıtları: 1 yıl</li>
+          <li>Çerez verileri: İlgili çerezin ömrü kadar (maksimum 13 ay)</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h2>5. İlgili Kişi Hakları</h2>
+        <p>KVKK'nın 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
+        <ul>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+          <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+          <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+          <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
+          <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+          <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini isteme</li>
+        </ul>
+        <p>Haklarınızı kullanmak için <strong>info@nefturktelekom.com</strong> adresine yazılı başvuruda bulunabilirsiniz.</p>
+      </div>
+      <div class="legal-section">
+        <h2>6. Yurt Dışı Veri Aktarımı</h2>
+        <p>Şirketimiz, kural olarak kişisel verileri yurt dışına aktarmamaktadır. Zorunlu hallerde KVKK'nın 9. maddesi kapsamındaki güvenceler sağlanmaktadır.</p>
+      </div>
+      <div class="legal-section">
+        <h2>7. İletişim</h2>
+        <p>Gizlilik politikamıza ilişkin sorularınız için: <strong>info@nefturktelekom.com</strong></p>
+        <p>Bu metin en son Ocak 2025 tarihinde güncellenmiştir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- COOKIE PAGE -->
+<!-- ===================================================== -->
+<div class="page" id="page-cookies">
+  <div class="legal-page">
+    <div class="legal-inner">
+      <h1>Çerez Politikası</h1>
+      <p class="legal-date">Son Güncelleme: Ocak 2025 | Versiyon: 1.0</p>
+      <div class="legal-section">
+        <h2>1. Çerez Nedir?</h2>
+        <p>Çerezler (cookie), ziyaret ettiğiniz web siteleri tarafından cihazınıza yerleştirilen küçük metin dosyalarıdır. Çerezler, web sitelerinin düzgün çalışmasını sağlamak, kullanıcı deneyimini iyileştirmek ve analitik bilgi toplamak amacıyla kullanılmaktadır.</p>
+      </div>
+      <div class="legal-section">
+        <h2>2. Kullandığımız Çerez Türleri</h2>
+        <h3>2.1 Zorunlu Çerezler</h3>
+        <p>Web sitesinin temel işlevlerini yerine getirebilmesi için gerekli çerezlerdir. Bu çerezler olmaksızın web sitesi düzgün çalışamaz. Kullanıcı onayı gerekmeksizin kullanılmaktadır.</p>
+        <ul>
+          <li><strong>session_id:</strong> Oturum yönetimi (oturum süresi)</li>
+          <li><strong>cookie_consent:</strong> Çerez tercihlerinizin hatırlanması (1 yıl)</li>
+        </ul>
+        <h3>2.2 Analitik Çerezler</h3>
+        <p>Web sitesi trafiğini ve kullanımını anonim olarak analiz etmek amacıyla kullanılmaktadır. Bu çerezler için onayınız alınmaktadır.</p>
+        <h3>2.3 Tercih Çerezleri</h3>
+        <p>Web sitesinin dil ve görünüm gibi tercihlerinizi hatırlamasını sağlayan çerezlerdir.</p>
+      </div>
+      <div class="legal-section">
+        <h2>3. Çerez Yönetimi</h2>
+        <p>Tarayıcınızın ayarlarından çerezleri devre dışı bırakabilir veya silebilirsiniz. Ancak zorunlu çerezlerin devre dışı bırakılması durumunda web sitesinin bazı işlevleri çalışmayabilir.</p>
+        <p>Popüler tarayıcılarda çerez yönetimi:</p>
+        <ul>
+          <li>Google Chrome: Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
+          <li>Mozilla Firefox: Seçenekler → Gizlilik ve Güvenlik</li>
+          <li>Microsoft Edge: Ayarlar → Gizlilik, Arama ve Hizmetler</li>
+          <li>Safari: Tercihler → Gizlilik</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h2>4. İletişim</h2>
+        <p>Çerez politikamıza ilişkin sorularınız için: <strong>info@nefturktelekom.com</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- FAQ PAGE -->
+<!-- ===================================================== -->
+<div class="page" id="page-faq">
+  <div class="faq-page">
+    <div class="faq-inner">
+      <div class="page-hero-label" style="background:var(--blue-pale);color:var(--blue-primary);border:1px solid rgba(30,136,229,0.2);display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Sık Sorulan Sorular</div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:var(--navy);margin-bottom:12px;font-weight:900;">SSS</h1>
+      <p style="font-size:15px;color:var(--grey-mid);margin-bottom:48px;line-height:1.7;max-width:600px;">NEFTÜRK TELEKOM A.Ş. hakkında en sık sorulan soruların yanıtlarını aşağıda bulabilirsiniz.</p>
+
+      <div class="faq-item open">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>NEFTÜRK TELEKOM A.Ş. aktif bir mobil operatör müdür?</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <p>Hayır. NEFTÜRK TELEKOM A.Ş., aktif bir mobil operatör değildir. Şirketimiz, Sanal Mobil Şebeke Operatörü (MVNO) lisans başvuru ve hazırlık sürecinde bulunmakta olup bu süreçte <strong>herhangi bir elektronik haberleşme hizmeti sunulmamaktadır.</strong></p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>SIM kart veya eSIM satın alabilir miyim?</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <p>Hayır. Şirketimiz şu anda herhangi bir SIM kart, eSIM veya mobil hizmet sunmamaktadır. Bu tür ürün ve hizmetler yalnızca BTK lisansının alınmasının ardından aktive edilecektir. Şu anda bu yönde yapılan hiçbir teklif şirketimizle ilişkili değildir.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>MVNO nedir? NEFTÜRK nasıl çalışacak?</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <p>MVNO (Mobile Virtual Network Operator / Sanal Mobil Şebeke Operatörü), kendi radyo şebeke altyapısına sahip olmaksızın, yerleşik mobil operatörlerin altyapısını kullanarak müşterilerine mobil haberleşme hizmeti sunan işletmecileri tanımlamaktadır. NEFTÜRK TELEKOM, lisans alındıktan sonra bu model çerçevesinde kurumsal telekomünikasyon çözümleri sunmayı planlamaktadır.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>Verilerimi nasıl koruyorsunuz?</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <p>Şirketimiz, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve AB GDPR düzenlemelerine tam uyumlu veri yönetimi politikası uygulamaktadır. Web sitemiz aracılığıyla yalnızca iletişim formu verileri ve teknik veriler toplanmaktadır. Detaylı bilgi için Gizlilik Politikamızı inceleyebilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>BTK lisansı ne zaman alınacak?</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <p>Lisans sürecine ilişkin kesin bir tarih paylaşılamamaktadır. Süreç, BTK'nın inceleme ve değerlendirme takvimine bağlıdır. Tüm gelişmeler web sitemiz üzerinden kamuoyuyla şeffaf biçimde paylaşılacaktır.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>Şirketle nasıl iletişime geçebilirim?</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <p>Web sitemizin <span onclick="navigate('contact')" style="color:var(--blue-primary);cursor:pointer;font-weight:600;">İletişim</span> sayfasındaki formu doldurarak veya <strong>info@nefturktelekom.com</strong> adresine e-posta göndererek bize ulaşabilirsiniz. Tüm taleplere en kısa sürede yanıt verilmektedir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- CONTACT PAGE -->
+<!-- ===================================================== -->
+<div class="page" id="page-contact">
+  <div class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-label">İletişim</div>
+      <h1 class="page-hero-title">Bizimle<br>İletişime Geçin</h1>
+      <p class="page-hero-sub">Kurumsal sorularınız, iş birliği talepleriniz veya genel bilgi için bize ulaşın. Telekomünikasyon hizmeti taleplerine şu an yanıt verilememektedir.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="section-inner">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="section-label">İletişim Bilgileri</div>
+          <h2 class="section-title">Kurumsal<br>İletişim</h2>
+          <p class="section-desc">Kurumsal iş birliği, yatırımcı ilişkileri veya genel bilgi talepleriniz için aşağıdaki iletişim kanallarımızı kullanabilirsiniz.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>E-posta</h4>
+              <a href="mailto:info@nefturktelekom.com">info@nefturktelekom.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Adres</h4>
+              <p>Rüzgarlıbahçe Mah. Kavak Sok. No:12/2<br>İmpa İş Merkezi, Beykoz / İSTANBUL</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            </div>
+            <div>
+              <h4>Web Sitesi</h4>
+              <p>nefturkgsm.com.tr</p>
+            </div>
+          </div>
+
+          <div style="margin-top:40px;padding:24px;background:var(--grey-bg);border-radius:14px;border-left:3px solid var(--blue-primary);">
+            <p style="font-size:13px;color:var(--grey-dark);line-height:1.7;"><strong>Önemli Not:</strong> Şirketimiz şu anda herhangi bir elektronik haberleşme hizmeti sunmamaktadır. Mobil hat, SIM kart veya internet hizmetine ilişkin talepler bu aşamada yanıtlanamamaktadır.</p>
+          </div>
+        </div>
+
+        <div class="contact-form" id="contactFormContainer">
+          <h3 class="form-title">Mesaj Gönderin</h3>
+          <p class="form-subtitle">Aşağıdaki formu doldurarak kurumsal taleplerinizi iletebilirsiniz.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ad</label>
+              <input type="text" id="fname" placeholder="Adınız">
+            </div>
+            <div class="form-group">
+              <label>Soyad</label>
+              <input type="text" id="lname" placeholder="Soyadınız">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>E-posta Adresi</label>
+            <input type="email" id="email" placeholder="eposta@sirket.com">
+          </div>
+          <div class="form-group">
+            <label>Konu</label>
+            <select id="subject">
+              <option value="">Konu Seçiniz</option>
+              <option>Kurumsal İş Birliği</option>
+              <option>Yatırımcı İlişkileri</option>
+              <option>Basın ve Medya</option>
+              <option>KVKK / Veri Talebi</option>
+              <option>Genel Bilgi</option>
+              <option>Diğer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mesajınız</label>
+            <textarea id="message" rows="5" placeholder="Mesajınızı buraya yazın..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="kvkkCheck">
+            <label for="kvkkCheck">
+              <a onclick="navigate('kvkk')" style="cursor:pointer;">Gizlilik Politikası</a> ve <a onclick="navigate('cookies')" style="cursor:pointer;">Çerez Politikası</a>'nı okudum, kişisel verilerimin KVKK kapsamında işlenmesini kabul ediyorum.
+            </label>
+          </div>
+          <button class="btn-primary" onclick="submitForm()" style="width:100%;justify-content:center;display:flex;align-items:center;gap:8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Mesajı Gönder
+          </button>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✅</div>
+            <h3>Mesajınız İletildi</h3>
+            <p>En kısa sürede sizinle iletişime geçeceğiz. Teşekkür ederiz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== FOOTER (shown on all pages) ===== -->
+<footer id="main-footer">
+  <div class="footer-inner">
+    <div class="footer-btk-notice">
+      <p><strong>Zorunlu Bildirim:</strong> Şirketimizce Sanal Mobil Şebeke Hizmeti kapsamında herhangi bir elektronik haberleşme hizmeti sunulmamaktadır. Bu bildirim BTK mevzuatı gereğince yapılmaktadır.</p>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
+          <svg width="44" height="44" viewBox="0 0 52 52" fill="none">
+            <ellipse cx="26" cy="26" rx="23" ry="10" stroke="#1E88E5" stroke-width="1.5" fill="none" transform="rotate(-20,26,26)"/>
+            <circle cx="26" cy="26" r="12" fill="url(#fg1)" opacity="0.9"/>
+            <circle cx="14" cy="26" r="3" fill="#1E3A8A"/>
+            <path d="M35 16 Q44 10 48 22" stroke="#1E88E5" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="fg1" x1="14" y1="14" x2="38" y2="38">
+                <stop offset="0%" stop-color="#90CAF9"/>
+                <stop offset="100%" stop-color="#1565C0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:16px;color:var(--red-light);">NEFTÜRK</div>
+            <div style="font-size:8px;color:rgba(255,255,255,0.35);letter-spacing:3px;">TELEKOM A.Ş.</div>
+          </div>
+        </div>
+        <p>Türkiye'nin kurumsal telekomünikasyon ekosistemi için değer yaratan, MVNO lisans hazırlık sürecinde faaliyet gösteren şeffaf bir kurumsal yapı.</p>
+        <p style="margin-top:12px;font-size:11px;">nefturkgsm.com.tr</p>
+      </div>
+      <div class="footer-col">
+        <h4>Kurumsal</h4>
+        <a onclick="navigate('about')">Hakkımızda</a>
+        <a onclick="navigate('btk')">BTK Uyum Bilgisi</a>
+        <a onclick="navigate('faq')">Sık Sorulan Sorular</a>
+        <a onclick="navigate('contact')">İletişim</a>
+      </div>
+      <div class="footer-col">
+        <h4>Yasal</h4>
+        <a onclick="navigate('kvkk')">Gizlilik Politikası</a>
+        <a onclick="navigate('cookies')">Çerez Politikası</a>
+        <a onclick="navigate('btk')">Uyum Bildirimi</a>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <a href="mailto:info@nefturktelekom.com">info@nefturktelekom.com</a>
+        <a style="line-height:1.7;cursor:default;">Rüzgarlıbahçe Mah. Kavak Sok.<br>No:12/2 İmpa İş Merkezi<br>Beykoz / İSTANBUL</a>
+        <a>nefturkgsm.com.tr</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2019–2025 NEFTÜRK TELEKOM A.Ş. Tüm hakları saklıdır.</p>
+      <div class="footer-bottom-links">
+        <a onclick="navigate('kvkk')">Gizlilik</a>
+        <a onclick="navigate('cookies')">Çerezler</a>
+        <a onclick="navigate('btk')">BTK Uyum</a>
+        <a onclick="openAdmin()" style="opacity:0.2;font-size:9px;">⚙</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== ADMIN PANEL (HIDDEN) ===== -->
+<div id="admin-panel">
+  <div class="admin-inner">
+    <div class="admin-header">
+      <h2>⚙ NEFTÜRK CMS — Admin Panel <span class="admin-status-badge badge-enabled" style="margin-left:12px;">v1.0</span></h2>
+      <button class="admin-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-nav">
+        <div class="admin-nav-item active" onclick="adminTab('cms')">📝 CMS</div>
+        <div class="admin-nav-item" onclick="adminTab('legal')">⚖️ Yasal</div>
+        <div class="admin-nav-item" onclick="adminTab('users')">👥 Kullanıcılar</div>
+        <div class="admin-nav-item" onclick="adminTab('esim')">📱 eSIM</div>
+        <div class="admin-nav-item" onclick="adminTab('billing')">💳 Fatura</div>
+        <div class="admin-nav-item" onclick="adminTab('analytics')">📊 Analitik</div>
+      </div>
+      <div class="admin-content-area">
+        <div class="admin-section active" id="admin-cms">
+          <h3>İçerik Yönetimi</h3>
+          <div class="admin-field"><label>Ana Sayfa Başlığı</label><input type="text" value="Türkiye'nin Kurumsal Telekomünikasyon Vizyonu"></div>
+          <div class="admin-field"><label>BTK Uyarı Metni</label><textarea rows="3">Şirketimizce Sanal Mobil Şebeke Hizmeti kapsamında herhangi bir elektronik haberleşme hizmeti sunulmamaktadır.</textarea></div>
+          <div class="admin-field"><label>Footer Şirket Adı</label><input type="text" value="NEFTÜRK TELEKOM A.Ş."></div>
+          <button class="admin-save">Kaydet</button>
+        </div>
+        <div class="admin-section" id="admin-legal">
+          <h3>Yasal Metinler</h3>
+          <div class="admin-field"><label>KVKK Metni Versiyonu</label><input type="text" value="1.0 — Ocak 2025"></div>
+          <div class="admin-field"><label>Çerez Politikası Versiyonu</label><input type="text" value="1.0 — Ocak 2025"></div>
+          <button class="admin-save">Güncelle</button>
+        </div>
+        <div class="admin-section" id="admin-users">
+          <h3>Kullanıcı Yönetimi</h3>
+          <div class="admin-feature-disabled">
+            <p>🔒 Müşteri yönetimi modülü</p>
+            <p style="margin-top:8px;">Bu modül BTK lisansı alındıktan sonra aktive edilecektir.</p>
+            <span class="admin-status-badge badge-disabled" style="margin-top:12px;display:inline-block;">DEVRE DIŞI</span>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-esim">
+          <h3>eSIM Marketplace</h3>
+          <div class="admin-feature-disabled">
+            <p>📱 eSIM satış ve aktivasyon modülü</p>
+            <p style="margin-top:8px;">Bu modül BTK lisansı ve operatör anlaşmaları tamamlandıktan sonra aktive edilecektir.</p>
+            <span class="admin-status-badge badge-disabled" style="margin-top:12px;display:inline-block;">DEVRE DIŞI</span>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-billing">
+          <h3>Faturalama Sistemi</h3>
+          <div class="admin-feature-disabled">
+            <p>💳 Ödeme ve faturalama entegrasyonu</p>
+            <p style="margin-top:8px;">Bu modül hizmet başlangıcından sonra aktive edilecektir.</p>
+            <span class="admin-status-badge badge-disabled" style="margin-top:12px;display:inline-block;">DEVRE DIŞI</span>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-analytics">
+          <h3>Analitik Dashboard</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
+            <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:16px;text-align:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:24px;color:white;">—</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;">Sayfa Görüntüleme</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:16px;text-align:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:24px;color:white;">—</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;">Form Gönderimi</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:16px;text-align:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:24px;color:white;">—</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;">Benzersiz Ziyaretçi</div>
+            </div>
+          </div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.25);text-align:center;">Analitik entegrasyonu yapılandırılmamış</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ===== NAVIGATION =====
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + page);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  // Hide mobile menu
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 20) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+
+// ===== COOKIE =====
+function closeCookie() {
+  document.getElementById('cookie-banner').style.display = 'none';
+  localStorage.setItem('nefturk_cookie_consent', 'true');
+}
+window.addEventListener('load', () => {
+  if (localStorage.getItem('nefturk_cookie_consent')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+});
+
+// ===== FAQ =====
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ===== CONTACT FORM =====
+function submitForm() {
+  const fname = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const kvkk = document.getElementById('kvkkCheck').checked;
+  
+  if (!fname || !email || !message) {
+    alert('Lütfen zorunlu alanları doldurun.');
+    return;
+  }
+  if (!kvkk) {
+    alert('Devam etmek için KVKK onayını vermeniz gerekmektedir.');
+    return;
+  }
+  // Simulate form submission
+  document.getElementById('contactFormContainer').innerHTML = `
+    <div class="form-success" style="display:block;">
+      <div class="form-success-icon">✅</div>
+      <h3 class="form-title">Mesajınız İletildi</h3>
+      <p class="form-subtitle" style="margin-bottom:0;">En kısa sürede sizinle iletişime geçeceğiz. Teşekkür ederiz.</p>
+    </div>
+  `;
+}
+
+// ===== ADMIN PANEL =====
+let adminKeySeq = [];
+document.addEventListener('keydown', (e) => {
+  adminKeySeq.push(e.key);
+  if (adminKeySeq.length > 4) adminKeySeq.shift();
+  if (adminKeySeq.join('') === 'admn') openAdmin();
+});
+
+function openAdmin() {
+  document.getElementById('admin-panel').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeAdmin() {
+  document.getElementById('admin-panel').style.display = 'none';
+  document.body.style.overfl
