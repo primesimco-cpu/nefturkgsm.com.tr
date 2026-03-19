@@ -1,1 +1,0 @@
-# nefturkgsm.com.tr
